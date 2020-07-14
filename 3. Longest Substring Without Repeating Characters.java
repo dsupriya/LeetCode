@@ -1,3 +1,4 @@
+//Brute force - n^3
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();
@@ -26,4 +27,24 @@ class Solution {
         }
         return true;
     }
+}
+//optimal o(n)
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        HashMap <Character, Integer> hm= new HashMap <Character, Integer>();
+        int ans =0;
+        for(int i=0,j=0;i<n&&j<n;j++)
+        {
+            char c = s.charAt(j);
+            if(hm.containsKey(c))
+            {
+                i = Math.max(hm.get(s.charAt(j)),i);
+            }
+            ans = Math.max(ans,j-i+1);
+            hm.put(c,j+1);
+            
+        }
+        return ans;
+}
 }
