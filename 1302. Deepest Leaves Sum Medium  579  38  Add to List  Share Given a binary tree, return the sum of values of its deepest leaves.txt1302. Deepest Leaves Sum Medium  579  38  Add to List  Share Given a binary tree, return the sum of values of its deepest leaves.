@@ -1,0 +1,120 @@
+1302. Deepest Leaves Sum
+Medium
+
+579
+
+38
+
+Add to List
+
+Share
+Given a binary tree, return the sum of values of its deepest leaves.
+Input: root = [1,2,3,4,5,null,6,7,null,null,null,null,8]
+Output: 15
+ 
+
+Constraints:
+
+The number of nodes in the tree is between 1 and 10^4.
+The value of nodes is between 1 and 100.
+
+
+sol:
+
+DFS vs BFS
+
+There are two ways to traverse the tree: DFS depth first search and BFS breadth first search. Here is a small summary
+
+diff
+
+Let's use this problem to discuss the difference between iterative BFS traversal with the queue and iterative DFS preorder traversal with the stack.
+
+Both are starting from the root and going down, both are using additional structures, what's the difference?
+
+Here is how it looks at the big scale: BFS traverses level by level, and DFS first goes to the leaves.
+
+diff
+
+Now let's go down to the implementation. The idea is similar:
+
+Push root into queue (BFS) or stack (DFS).
+
+At each step pop out one node, and push its children into stack/queue.
+
+For BFS: pop out from the left, first push the left child, and then the right one.
+
+For DFS: pop out from the right, first push the right child, and then the left one.
+
+diff
+
+
+
+Approach 1: Iterative DFS Preorder Traversal.
+Intuition
+
+Here we implement standard iterative preorder traversal with the stack:
+
+Push root into stack.
+
+While stack is not empty:
+
+Pop out a node from stack and update the current number.
+
+If the node is a leaf
+
+Update the deepest leaves sum deepest_sum.
+Push right and left child nodes into stack.
+
+Return deepest_sum.
+
+Implementation
+
+Note, that Javadocs recommends to use ArrayDeque, and not Stack as a stack implementation.
+
+
+Complexity Analysis
+
+Time complexity: \mathcal{O}(N)O(N) since one has to visit each node.
+
+Space complexity: up to \mathcal{O}(H)O(H) to keep the stack, where HH is a tree height.
+
+
+
+Approach 2: Iterative BFS Traversal.
+Intuition
+
+Here we implement standard iterative preorder traversal with the stack:
+
+Add root into queue.
+
+While queue is not empty:
+
+Pop out a node from queue and update the current number.
+
+If the node is a leaf
+
+Update the deepest leaves sum deepest_sum.
+Add first left and then right child node into queue.
+
+Return deepest_sum.
+
+Implementation
+
+
+Complexity Analysis
+
+Time complexity: \mathcal{O}(N)O(N) since one has to visit each node.
+
+Space complexity: up to \mathcal{O}(N)O(N) to keep the queue. Let's use the last level to estimate the queue size. This level could contain up to N/2N/2 tree nodes in the case of complete binary tree.
+
+
+
+Approach 3: Optimized Iterative BFS Traversal.
+Intuition
+
+The code in Approach 2 is not the optimal one. It's done this way to simplify DFS vs BFS comparison but now let's move further. Since we traverse level by level, it's enough just to check if this level is the last one. If it's the case, return the sum of all nodes values.
+
+Current
+1 / 6
+Implementation
+
