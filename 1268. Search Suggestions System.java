@@ -12,7 +12,7 @@ class TrieNode
 class Solution {
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
         Arrays.sort(products);
-        
+        //creation trie
         TrieNode root = new TrieNode();
         LinkedList <List<String>> ans = new LinkedList();
         
