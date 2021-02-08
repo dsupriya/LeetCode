@@ -20,3 +20,7 @@ class Solution {
         
     }
 }
+
+//time = O(n)
+//space = o(n)
+//can be solved with sorting approch
