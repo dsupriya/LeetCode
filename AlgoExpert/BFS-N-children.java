@@ -15,7 +15,7 @@ class Program {
 
     public List<String> breadthFirstSearch(List<String> array) {
       // Write your code here.
-			LinkedList <Node> q = new LinkedList<Node>();
+			LinkedList <Node> q = new LinkedList();
 			
 			q.add(this);
 			while(!q.isEmpty())
