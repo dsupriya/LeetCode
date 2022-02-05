@@ -4,11 +4,7 @@ class Solution {
         int start,end,mid;
         start = 0;
         end = n-1;
-        if(n==1 && nums[0]!=target)
-        {
-            int ans = nums[0] < target ? 1 : 0;
-            return ans;
-        }
+        
         
         while(start<end)
         {
