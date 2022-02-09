@@ -11,7 +11,7 @@ class Solution {
                 if(grid[i][j]==1 && visited[i][j]==false)
                 {
                     visited[i][j]=true;
-                    int cur = DFS(grid,visited,i,j,1);
+                    int cur = DFS(grid,visited,i,j);
                     if(cur>ans)
                         ans = cur;
                 }
@@ -19,7 +19,7 @@ class Solution {
         }
         return ans;
     }
-    public int DFS(int[][] image, boolean [][]visited , int sr, int sc, int area)
+    public int DFS(int[][] image, boolean [][]visited , int sr, int sc)
     {
         int n = image.length;
         int m = image[0].length;
@@ -35,7 +35,7 @@ class Solution {
             col = sc+y[i];
             if(row<n && row>=0 && col<m && col>=0 && visited[row][col]==false && image[row][col]==1) {
                 visited [row][col] = true; 
-                cur = cur + DFS(image,visited,row,col,area++);
+                cur = cur + DFS(image,visited,row,col);
                 
             }
         }
