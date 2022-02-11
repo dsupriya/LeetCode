@@ -13,7 +13,6 @@ class Solution {
         {
             if(isAnagram(hash1,hash2))
             {
-                
                 ans.add(i);
             }
             int end = i+len;
