@@ -26,17 +26,17 @@ class Solution {
         String op2 = new String(output);
         if(Character.isLowerCase(ch))
         {
-            if(i==output.length()-1)
-             op2 = output.substring(0,i)+ output.substring(i,i+1).toUpperCase();
+            if(i==output.length()-1) // converting last char
+                op2 = output.substring(0,i)+ output.substring(i,i+1).toUpperCase();
             else
-             op2 = output.substring(0,i)+ output.substring(i,i+1).toUpperCase()+ output.substring(i+1);
+                op2 = output.substring(0,i)+ output.substring(i,i+1).toUpperCase()+ output.substring(i+1);
         }
         else 
         {
             if(i==output.length()-1)
-             op2 = output.substring(0,i)+ output.substring(i,i+1).toLowerCase();
+                op2 = output.substring(0,i)+ output.substring(i,i+1).toLowerCase();
             else
-             op2 = output.substring(0,i)+ output.substring(i,i+1).toLowerCase()+ output.substring(i+1);
+                op2 = output.substring(0,i)+ output.substring(i,i+1).toLowerCase()+ output.substring(i+1);
         }
         getPermutations(input,op1,i+1,res);
         getPermutations(input,op2,i+1,res);
