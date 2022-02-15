@@ -77,3 +77,6 @@ class Cell{
         this.level = level;
     }
 }
+
+// Time = O(n*m)
+// space = O(n*m)
