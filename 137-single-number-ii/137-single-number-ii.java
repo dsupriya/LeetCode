@@ -28,3 +28,11 @@ class Solution {
         
     }
 }
+
+// complexicity : sort [nlon] + traversal [n]
+//space : o(1) , concidering inplace sort
+// basic idea, is after sort numbers will in clusters
+// 1,1,1,2,3,3,3 -> 
+// i = 1,
+// check i and i-1 if not same, should return i-1
+// handle start end case
