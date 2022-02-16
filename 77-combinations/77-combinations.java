@@ -14,7 +14,6 @@ class Solution {
     {
         if(cur.size()==k)
         {
-            //System.out.println("start "+ start);
             res.add(new LinkedList(cur));
             return;
         }
@@ -25,10 +24,7 @@ class Solution {
         cur.add(start);
         getCombinations(n,k,start+1,cur,res);
         
-        LinkedList <Integer> excluded = new LinkedList(cur);
         cur.removeLast();
-        //System.out.println(cur+ "\n");
-        
         getCombinations(n,k,start+1,cur,res);
         return;
     }
