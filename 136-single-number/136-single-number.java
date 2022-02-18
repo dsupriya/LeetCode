@@ -1,13 +1,17 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        int ans = 0;
-        for(int i=0;i<nums.length;i++)
-            ans = ans ^ nums[i];
-        return ans;
-        
+        int n = nums.length;
+        int res = 0;
+        for(int i=0;i<n;i++)
+        {
+            res = res ^ nums[i];
+            
+        }
+        return res;
         
     }
 }
 
-// 2 ^ 2 =0
-// 0 ^ num = num
+
+// xor with same number returns zero
+// xor with zero returns that number
