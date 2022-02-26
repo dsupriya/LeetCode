@@ -36,21 +36,21 @@ class Solution {
             Node cur = queue.removeFirst();
            
             List<Node> neigh = cur.neighbors;
-            for(Node n : neigh)
+            for(Node neigh_old : neigh)
             {
                 //System.out.println(hm);
-                if(!hm.containsKey(n))
+                if(!hm.containsKey(neigh_old))
                 {
-                    Node next = new Node(n.val,  new ArrayList<Node>());
+                    Node new_next_neigh = new Node(neigh_old.val,  new ArrayList<Node>());
                     Node new_start = hm.get(cur);
-                    new_start.neighbors.add(next);
-                    queue.add(n);
-                    hm.put(n,next);
+                    new_start.neighbors.add(new_next_neigh);
+                    queue.add(neigh_old);
+                    hm.put(neigh_old,new_next_neigh);
                     
                 }
                 else
                 {
-                    Node next = hm.get(n);
+                    Node next = hm.get(neigh_old);
                     Node new_start = hm.get(cur);
                     new_start.neighbors.add(next);
                     
@@ -63,3 +63,6 @@ class Solution {
         
     }
 }
+
+// Idea is , create HashTable with key as old node and value as new node
+// traverse the graph bfs, create nodes for each neigh, now to link with previous node, fetch that detials from hm
