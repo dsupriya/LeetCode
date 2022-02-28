@@ -2,7 +2,7 @@ class Solution {
     public int maxSubArray(int[] nums) {
         
         int cur = 0;
-        int prev  = Integer.MIN_VALUE;
+        
         int max = Integer.MIN_VALUE;
         
         for(int n :nums)
