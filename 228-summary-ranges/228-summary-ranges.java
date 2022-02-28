@@ -38,7 +38,6 @@ class Solution {
             }
             
         }
-        //for last renge
         String renge;
         if(prev==next)
             renge = "" +nums[prev];
