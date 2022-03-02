@@ -23,3 +23,8 @@ class Solution {
         
     }
 }
+
+/* At each day, we take a decision [buy, sell]
+we buy , if cur is < min, i.e. this is the minimum price we have found so far
+we sell, if cur > than min
+*/
