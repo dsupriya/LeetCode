@@ -8,6 +8,8 @@ class Solution {
         
         if(r==n && m ==c)
             return mat;
+        
+        // check if reshape operation with given parameters is possible and legal is not return original
         if(m*n != r*c)
             return mat;
         int [][] res = new int[r][c];
