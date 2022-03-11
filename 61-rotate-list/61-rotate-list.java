@@ -52,3 +52,11 @@ class Solution {
         return n;
     }
 }
+
+
+/*
+
+idea is
+find length of linkedlist
+find rem then node rank from the start
+*/
