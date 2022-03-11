@@ -14,37 +14,26 @@
  * }
  */
 class Solution {
+    public int ans = 0;
     public int sumNumbers(TreeNode root) {
-        ArrayList<String> path = new ArrayList();
-        getPaths(root,path,"");
-        int res = 0;
+        if(root==null)
+            return 0;
         
-        for(String s : path)
-        {
-            int cur = Integer.parseInt(s);
-            res = res+cur;
-        }
-        return res;
-        
+        solve(root,0);
+        return ans;
         
     }
-    public void getPaths(TreeNode root, ArrayList<String> path, String s)
+    public void solve(TreeNode root, int val)
     {
         if(root==null)
             return;
+        val = val*10 + root.val;
         if(root.left==null && root.right==null)
         {
-            s = s+""+root.val;
-            path.add(s);
+            ans = ans+val;
             return;
         }
-        
-         s = s+""+root.val;
-        getPaths(root.left,path,s);
-        getPaths(root.right,path,s);
-        
-        return;
-        
-        
+        solve(root.left,val);
+        solve(root.right,val);
     }
 }
