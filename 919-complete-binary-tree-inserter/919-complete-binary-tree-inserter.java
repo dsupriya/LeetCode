@@ -34,17 +34,20 @@ class CBTInserter {
     
     public int insert(int val) {
         TreeNode cur = this.parent.getFirst();
-        TreeNode new_node = new TreeNode(val);
+        
         
         if(cur.left==null)
         {
+            TreeNode new_node = new TreeNode(val);
             cur.left = new_node;
             this.parent.add(new_node);
             return cur.val;   
         }
         else if(cur.right == null)
         {
+            TreeNode new_node = new TreeNode(val);
             cur.right = new_node;
+           
             this.parent.add(new_node);
             return cur.val;  
         }
