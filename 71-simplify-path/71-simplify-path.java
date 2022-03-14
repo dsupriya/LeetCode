@@ -20,7 +20,7 @@ class Solution {
                 s.push(paths[i]);
         }
         StringBuilder sb = new StringBuilder();
-        //System.out.println(s);
+         
         while(!s.isEmpty())
         {
             String word = "/" + s.pop();
