@@ -33,6 +33,6 @@ class Solution {
         
     }
 }
-/*idea is create array of last seen index of each elemnet
+/*idea is to create array of last seen index of each elemnet
 if top of stack > cur and there is later occurence of top of the stack, then we can get rid of top of the stack
 */
