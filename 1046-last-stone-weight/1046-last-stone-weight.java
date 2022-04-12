@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution {
     public int lastStoneWeight(int[] stones) {
-        //Arrays.sort(stones);
+       
         PriorityQueue <Integer>heap = new PriorityQueue(Collections.reverseOrder());
         int n = stones.length;
         for(int i=0;i<n;i++)
