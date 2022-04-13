@@ -8,7 +8,8 @@ class Solution {
             return 1+brokenCalc(startValue,target/2);
         }
         else
-        return 1+brokenCalc(startValue,target+1);
+             return 1+brokenCalc(startValue,target+1);
         
     }
 }
+//991. Broken Calculator
