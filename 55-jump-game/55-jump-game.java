@@ -16,7 +16,7 @@ class Solution {
                    return true;
                 for(int j=i+1;j<=i+cur && j<n;j++)
                 {
-                    //System.out.println(i+" "+j);
+                    
                     dp[j] = true;
                 }
             }
