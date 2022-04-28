@@ -30,3 +30,7 @@ class Solution {
         return max;
     }
 }
+
+// idea is to take first to n-1 and run house robber with 
+// then 1 to n 
+// take max of both
