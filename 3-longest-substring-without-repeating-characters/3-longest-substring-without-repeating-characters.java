@@ -28,4 +28,19 @@ class Solution {
 /*
 time complexity  = o(n)
 space complexity = o(1) if we use constant map (counter kind 256 length array)
+
+
+brute force :
+
+create all substring  o(n2) then check each substring for repeating char
+o(n3)
+space o(n)
+
+
+Sliding window with hashset
+
+time complexity  = o(2n)
+space complexity = o(n)
+
+
 */
