@@ -22,3 +22,10 @@ class Solution {
         
     }
 }
+
+//idea here is, if found repeating char, what was the previous index and move left of the window directly to the previous_index+1
+
+/*
+time complexity  = o(n)
+space complexity = o(1) if we use constant map (counter kind 256 length array)
+*/
