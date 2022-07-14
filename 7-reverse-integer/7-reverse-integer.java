@@ -23,3 +23,12 @@ class Solution {
             
     }
 }
+
+/*
+3 things , reverse the num, take care of neagtive and overflow
+1) rev = (rev*10)+rem;
+2) negative can be handled with simple boolean
+3) for overflow, keep prev reversed number
+at each step , check if((rev-rem))/10  == prev if not, number has oveflown
+
+*/
