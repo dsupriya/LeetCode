@@ -33,7 +33,7 @@ class Solution {
             {
                 int r = row+x[i];
                 int c = col+y[i];
-                if(r<n && r>=0 && c<m && c>=0 && grid[r][c]==1 &&visited[r][c]==false )
+                if(r<n && r>=0 && c<m && c>=0 && grid[r][c]==1  )
                 {
                     Cell next = new Cell(r,c,cur.level+1);
                     visited[r][c] = true;
